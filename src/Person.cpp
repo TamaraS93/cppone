@@ -23,9 +23,9 @@ Person *Person::insert_person()
     std::cout << "Enter address" << std::endl;
     std::cin >> address_function;
 
-    Person new_person(name_function, address_function, JMBG_function);
+    Person *new_person = new Person(name_function, address_function, JMBG_function);
     List l;
-    l.insert(&new_person);
+    l.insert(new_person);
 
-    return &new_person;
+    return new_person;
 }
